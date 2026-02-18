@@ -1,73 +1,68 @@
-# Welcome to your Lovable project
+# AlgoViz — Interactive Algorithm Visualizer
 
-## Project info
+> Built by [Ishan Upadhyay](https://github.com/GlitchyIshan)
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+A beautifully crafted, interactive algorithm visualization platform built with React, TypeScript, and Tailwind CSS. Watch sorting algorithms, pathfinding algorithms, and data structure operations come to life with step-by-step animations.
 
-## How can I edit this code?
+## Features
 
-There are several ways of editing your application.
+- **Sorting Algorithms** — Bubble, Selection, Insertion, Merge, Quick, and Heap Sort with synchronized code highlighting
+- **Pathfinding Algorithms** — BFS, DFS, Dijkstra's, and A\* on an interactive grid with wall-drawing
+- **Data Structures** — Stack, Queue, Linked List, BST, and AVL Tree with step-by-step operation visualization
+- **Playback Controls** — Play, pause, step forward/backward, and scrub through any algorithm
+- **Complexity Analysis** — Time and space complexity shown at every step
+- **Dark UI** — Clean, minimal dark interface powered by shadcn/ui
 
-**Use Lovable**
+## Tech Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+- [React 18](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/) — build tool
+- [Tailwind CSS](https://tailwindcss.com/) + [shadcn/ui](https://ui.shadcn.com/)
+- [Framer Motion](https://www.framer.com/motion/) — animations
+- [Zustand](https://zustand-demo.pmnd.rs/) — state management
+- [React Router v6](https://reactrouter.com/)
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+## Getting Started
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Clone the repo
+git clone https://github.com/GlitchyIshan/algorithmic-canvas.git
+cd algorithmic-canvas
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Install dependencies
+npm install
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the dev server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Open [http://localhost:8080](http://localhost:8080) in your browser.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Scripts
 
-**Use GitHub Codespaces**
+| Command           | Description              |
+| ----------------- | ------------------------ |
+| `npm run dev`     | Start development server |
+| `npm run build`   | Production build         |
+| `npm run preview` | Preview production build |
+| `npm run test`    | Run tests                |
+| `npm run lint`    | Lint code                |
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Project Structure
 
-## What technologies are used for this project?
+```
+src/
+├── algorithms/       # Pure algorithm logic (sorting, pathfinding, DS)
+├── components/
+│   ├── controls/     # PlaybackControls
+│   ├── layout/       # AppLayout, AppSidebar
+│   ├── panels/       # AlgorithmInfo, CodePanel
+│   └── visualizer/   # SortingVisualizer, PathfindingGrid, DSVisualizer
+├── pages/            # Route-level pages
+├── store/            # Zustand stores
+└── hooks/            # Custom React hooks
+```
 
-This project is built with:
+## License
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+MIT © [Ishan Upadhyay](https://github.com/GlitchyIshan)
