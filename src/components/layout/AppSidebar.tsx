@@ -9,7 +9,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from '@/components/ui/sidebar';
-import { BarChart3, Grid3X3, Home, ArrowUpDown, ArrowDownUp, ListOrdered, GitMerge, Zap, Layers, Search, Route, Navigation, Star } from 'lucide-react';
+import { BarChart3, Grid3X3, Home, ArrowUpDown, ArrowDownUp, ListOrdered, GitMerge, Zap, Layers, Search, Route, Navigation, Star, LayoutList, Inbox, Link2, Binary, TreePine } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const navItems = [
@@ -35,6 +35,16 @@ const navItems = [
       { title: 'DFS', url: '/pathfinding/dfs', icon: Route },
       { title: "Dijkstra's", url: '/pathfinding/dijkstra', icon: Navigation },
       { title: 'A* Search', url: '/pathfinding/astar', icon: Star },
+    ],
+  },
+  {
+    label: 'Data Structures',
+    items: [
+      { title: 'Stack', url: '/ds/stack', icon: LayoutList },
+      { title: 'Queue', url: '/ds/queue', icon: Inbox },
+      { title: 'Linked List', url: '/ds/linked-list', icon: Link2 },
+      { title: 'BST', url: '/ds/bst', icon: Binary },
+      { title: 'AVL Tree', url: '/ds/avl', icon: TreePine },
     ],
   },
 ];
