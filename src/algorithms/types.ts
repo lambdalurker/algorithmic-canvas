@@ -39,3 +39,24 @@ export interface PathfindingAlgorithm {
 }
 
 export type CellType = 'empty' | 'wall' | 'start' | 'end';
+
+export interface DataStructureStep {
+  elements: number[];
+  highlighted: number[];
+  description: string;
+  codeLine: number;
+  action: string;
+  pointers: Record<string, number>;
+  treeData?: any;
+}
+
+export interface DSAlgorithm {
+  id: string;
+  name: string;
+  description: string;
+  timeComplexity: string;
+  spaceComplexity: string;
+  operations: string[];
+  code: string[];
+  run: (ops: any[]) => DataStructureStep[];
+}

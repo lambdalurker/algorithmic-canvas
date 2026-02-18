@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, BarChart3, Grid3X3, Zap, BookOpen } from 'lucide-react';
+import { ArrowRight, BarChart3, Grid3X3, Zap, BookOpen, Layers } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const categories = [
@@ -19,6 +19,14 @@ const categories = [
     href: '/pathfinding/bfs',
     color: 'from-accent/20 to-accent/5',
     items: ['BFS', 'DFS', "Dijkstra's", 'A* Search'],
+  },
+  {
+    title: 'Data Structures',
+    description: 'Visualize Stack, Queue, Linked List, BST, and AVL Tree operations with step-by-step animations.',
+    icon: Layers,
+    href: '/ds/stack',
+    color: 'from-destructive/20 to-destructive/5',
+    items: ['Stack', 'Queue', 'Linked List', 'BST', 'AVL Tree'],
   },
 ];
 
