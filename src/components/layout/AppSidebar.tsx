@@ -1,4 +1,4 @@
-import { useLocation, Link } from 'react-router-dom';
+import { useLocation, Link } from "react-router-dom";
 import {
   Sidebar,
   SidebarContent,
@@ -8,43 +8,62 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from '@/components/ui/sidebar';
-import { BarChart3, Grid3X3, Home, ArrowUpDown, ArrowDownUp, ListOrdered, GitMerge, Zap, Layers, Search, Route, Navigation, Star, LayoutList, Inbox, Link2, Binary, TreePine } from 'lucide-react';
-import { cn } from '@/lib/utils';
+} from "@/components/ui/sidebar";
+import {
+  BarChart3,
+  Grid3X3,
+  Home,
+  ArrowUpDown,
+  ArrowDownUp,
+  ListOrdered,
+  GitMerge,
+  Zap,
+  Layers,
+  Search,
+  Route,
+  Navigation,
+  Star,
+  LayoutList,
+  Inbox,
+  Link2,
+  Binary,
+  TreePine,
+} from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const navItems = [
   {
-    label: 'Home',
-    items: [{ title: 'Dashboard', url: '/', icon: Home }],
+    label: "Home",
+    items: [{ title: "Dashboard", url: "/", icon: Home }],
   },
   {
-    label: 'Sorting',
+    label: "Sorting",
     items: [
-      { title: 'Bubble Sort', url: '/sorting/bubble', icon: ArrowUpDown },
-      { title: 'Selection Sort', url: '/sorting/selection', icon: ArrowDownUp },
-      { title: 'Insertion Sort', url: '/sorting/insertion', icon: ListOrdered },
-      { title: 'Merge Sort', url: '/sorting/merge', icon: GitMerge },
-      { title: 'Quick Sort', url: '/sorting/quick', icon: Zap },
-      { title: 'Heap Sort', url: '/sorting/heap', icon: Layers },
+      { title: "Bubble Sort", url: "/sorting/bubble", icon: ArrowUpDown },
+      { title: "Selection Sort", url: "/sorting/selection", icon: ArrowDownUp },
+      { title: "Insertion Sort", url: "/sorting/insertion", icon: ListOrdered },
+      { title: "Merge Sort", url: "/sorting/merge", icon: GitMerge },
+      { title: "Quick Sort", url: "/sorting/quick", icon: Zap },
+      { title: "Heap Sort", url: "/sorting/heap", icon: Layers },
     ],
   },
   {
-    label: 'Pathfinding',
+    label: "Pathfinding",
     items: [
-      { title: 'BFS', url: '/pathfinding/bfs', icon: Search },
-      { title: 'DFS', url: '/pathfinding/dfs', icon: Route },
-      { title: "Dijkstra's", url: '/pathfinding/dijkstra', icon: Navigation },
-      { title: 'A* Search', url: '/pathfinding/astar', icon: Star },
+      { title: "BFS", url: "/pathfinding/bfs", icon: Search },
+      { title: "DFS", url: "/pathfinding/dfs", icon: Route },
+      { title: "Dijkstra's", url: "/pathfinding/dijkstra", icon: Navigation },
+      { title: "A* Search", url: "/pathfinding/astar", icon: Star },
     ],
   },
   {
-    label: 'Data Structures',
+    label: "Data Structures",
     items: [
-      { title: 'Stack', url: '/ds/stack', icon: LayoutList },
-      { title: 'Queue', url: '/ds/queue', icon: Inbox },
-      { title: 'Linked List', url: '/ds/linked-list', icon: Link2 },
-      { title: 'BST', url: '/ds/bst', icon: Binary },
-      { title: 'AVL Tree', url: '/ds/avl', icon: TreePine },
+      { title: "Stack", url: "/ds/stack", icon: LayoutList },
+      { title: "Queue", url: "/ds/queue", icon: Inbox },
+      { title: "Linked List", url: "/ds/linked-list", icon: Link2 },
+      { title: "BST", url: "/ds/bst", icon: Binary },
+      { title: "AVL Tree", url: "/ds/avl", icon: TreePine },
     ],
   },
 ];
@@ -53,8 +72,8 @@ export function AppSidebar() {
   const location = useLocation();
 
   return (
-    <Sidebar className="border-r border-border">
-      <div className="h-14 flex items-center px-5 border-b border-border">
+    <Sidebar className="border-r border-border/70 bg-sidebar-background/90 backdrop-blur">
+      <div className="h-14 flex items-center px-5 border-b border-border/70 bg-sidebar-background/80">
         <Link to="/" className="flex items-center gap-2">
           <BarChart3 className="h-5 w-5 text-primary" />
           <span className="font-bold text-sm tracking-tight">AlgoViz</span>
@@ -76,10 +95,10 @@ export function AppSidebar() {
                         <Link
                           to={item.url}
                           className={cn(
-                            'flex items-center gap-2.5 px-3 py-1.5 rounded-lg text-sm transition-colors',
+                            "flex items-center gap-2.5 px-3 py-1.5 rounded-xl text-sm transition-all",
                             isActive
-                              ? 'bg-primary/10 text-primary font-medium'
-                              : 'text-muted-foreground hover:text-foreground hover:bg-muted/50'
+                              ? "bg-primary/15 text-primary font-semibold shadow-sm"
+                              : "text-muted-foreground hover:text-foreground hover:bg-muted/60 hover:translate-x-0.5",
                           )}
                         >
                           <item.icon className="h-4 w-4 shrink-0" />
